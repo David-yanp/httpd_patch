@@ -1,0 +1,5 @@
+
+LTLIBRARY_NAME    = libitk.la
+LTLIBRARY_SOURCES = itk.c
+
+include $(top_srcdir)/build/ltlib.mk

@@ -1,0 +1,18 @@
+#! /bin/sh
+#
+# Created by configure
+
+"./configure" \
+"--with-mpm=itk" \
+"--enable-mods-shared=all" \
+"--prefix=/etc/httpd" \
+"--enable-suexec" \
+"--enable-cgi" \
+"--enable-proxy" \
+"--enable-cache" \
+"--enable-disk-cache" \
+"--enable-authn-alias" \
+"--enable-authn-anon" \
+"--enable-authn-dbm" \
+"--enable-ssl" \
+"$@"

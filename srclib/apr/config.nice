@@ -1,0 +1,24 @@
+#! /bin/sh
+#
+# Created by configure
+
+"/tmp/sos/httpd-2.2.32/srclib/apr/configure" \
+"--disable-option-checking" \
+"--with-mpm=itk" \
+"--enable-mods-shared=all" \
+"--enable-suexec" \
+"--enable-cgi" \
+"--enable-proxy" \
+"--enable-cache" \
+"--enable-disk-cache" \
+"--enable-ldap" \
+"--cache-file=/dev/null" \
+"--srcdir=/tmp/sos/httpd-2.2.32/srclib/apr" \
+"--prefix=/srv" \
+"--exec-prefix=/srv" \
+"--libdir=/srv/lib" \
+"--includedir=/srv/include" \
+"--bindir=/srv/bin" \
+"--datadir=/srv" \
+"--with-installbuilddir=/srv/build" \
+"$@"

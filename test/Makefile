@@ -1,0 +1,25 @@
+top_srcdir   = /tmp/sos/httpd-2.2.32
+top_builddir = /tmp/sos/httpd-2.2.32
+srcdir       = /tmp/sos/httpd-2.2.32/test
+builddir     = /tmp/sos/httpd-2.2.32/test
+VPATH        = /tmp/sos/httpd-2.2.32/test
+
+# no targets: we don't want to build anything by default. if you want the
+# test programs, then "make test"
+TARGETS =
+
+PROGRAMS =
+
+PROGRAM_LDADD        = $(EXTRA_LDFLAGS) $(PROGRAM_DEPENDENCIES) $(EXTRA_LIBS)
+PROGRAM_DEPENDENCIES =  \
+	$(top_srcdir)/srclib/apr-util/libaprutil.la \
+	$(top_srcdir)/srclib/apr/libapr.la
+
+include $(top_builddir)/build/rules.mk
+
+test: $(PROGRAMS)
+
+# example for building a test proggie
+# dbu_OBJECTS = dbu.lo
+# dbu: $(dbu_OBJECTS)
+#	$(LINK) $(dbu_OBJECTS) $(PROGRAM_LDADD)
